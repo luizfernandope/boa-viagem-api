@@ -13,8 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ManyToAny;
-
 import br.com.etechoracio.boa_viagem.enums.CategoriaEnum;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +27,7 @@ public class Gasto {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	@Column(name = "ID_GASTOS")
+	@Column(name = "ID_GASTO")
 	private Long id;
 
 	@Column(name = "TX_DESCRICAO")
@@ -42,10 +40,10 @@ public class Gasto {
 	@Column(name = "TP_CATEGORIA")
 	private CategoriaEnum categoria;
 
-	@Column(name = "TP_GASTOS")
+	@Column(name = "DT_GASTO")
 	private LocalDate gasto;
 
-	@Column(name = "VLR_GASTOS")
+	@Column(name = "VLR_GASTO")
 	private Double valor;
 
 	@ManyToOne
